@@ -95,13 +95,14 @@ s.addShape(pres.shapes.OVAL, { x: 8.85, y: 2.05, w: 0.3, h: 0.3, fill: { color: 
 s.addText("Арктика: деньги и безопасность", { placeholder: "title" });
 s.addText("Государство, ледоколы, экономика рейса и safety first: где проходит баланс для нашего флота на трассе Севморпути", { x: 0.6, y: 3.2, w: 5.6, h: 0.8, fontSize: 16, color: C.accent4, margin: 0, valign: "top", isTextBox: true });
 s.addText("Пицуков Михаил Георгиевич", { x: 0.6, y: 4.05, w: 6.5, h: 0.32, fontSize: 18, bold: true, color: C.background1, margin: 0, valign: "middle", isTextBox: true });
-s.addText("менеджер департамента танкерных перевозок", { x: 0.6, y: 4.37, w: 6.5, h: 0.3, fontSize: 14, color: C.accent4, margin: 0, valign: "middle", isTextBox: true });
+s.addText("менеджер отдела танкерных перевозок", { x: 0.6, y: 4.37, w: 6.5, h: 0.3, fontSize: 14, color: C.accent4, margin: 0, valign: "middle", isTextBox: true });
 if (HAS_QR) {
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.0, y: 3.55, w: 1.5, h: 1.5, rectRadius: 0.08, fill: { color: "FFFFFF" }, line: { type: "none" }, objectName: "QR фон" });
-  s.addImage({ path: QRPATH, x: 8.1, y: 3.65, w: 1.3, h: 1.3, altText: "QR-код с контактами докладчика" });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.0, y: 3.55, w: 1.5, h: 1.65, rectRadius: 0.08, fill: { color: "FFFFFF" }, line: { type: "none" }, objectName: "QR фон" });
+  s.addImage({ path: QRPATH, x: 8.1, y: 3.62, w: 1.3, h: 1.3, altText: "QR-код с контактами докладчика" });
+  s.addText("Контакты", { x: 8.0, y: 4.94, w: 1.5, h: 0.22, fontSize: 11, bold: true, color: C.text1, align: "center", valign: "middle", margin: 0, isTextBox: true });
 }
-s.addText("Северный проект  ·  Доклад для капитанов и берегового офиса  ·  октябрь 2026", { x: 0.6, y: 4.95, w: 6.5, h: 0.3, fontSize: 12, color: C.background2, margin: 0, isTextBox: true });
-s.addNotes("[0:30] Добрый день, коллеги. Меня зовут Михаил Георгиевич Пицуков, я менеджер департамента танкерных перевозок." + (HAS_QR ? " Мои контакты — по QR-коду на этом и на последнем слайде." : "") + " Тема — Арктика через призму двух вещей, которые в нашей профессии вечно спорят: деньги и безопасность. Формат: 15 минут рассказа, по ходу несколько вопросов к залу — отвечайте с места, мне важнее ваш опыт, чем мой слайд. Потом 15 минут обсуждения. Данные — на октябрь 2026, по официальным источникам: Росатом, Минтранс, Минвостокразвития, Правительство, плюс международные для сверки. Где источники расходятся — скажу прямо.");
+s.addText("ООО «ТК Северный Проект»  ·  Доклад для капитанов и берегового офиса  ·  октябрь 2026", { x: 0.6, y: 4.95, w: 6.5, h: 0.3, fontSize: 12, color: C.background2, margin: 0, isTextBox: true });
+s.addNotes("[0:30] Добрый день, коллеги. Меня зовут Михаил Георгиевич Пицуков, я менеджер отдела танкерных перевозок." + (HAS_QR ? " Мои контакты — по QR-коду на этом и на последнем слайде." : "") + " Тема — Арктика через призму двух вещей, которые в нашей профессии вечно спорят: деньги и безопасность. Формат: 15 минут рассказа, по ходу несколько вопросов к залу — отвечайте с места, мне важнее ваш опыт, чем мой слайд. Потом 15 минут обсуждения. Данные — на октябрь 2026, по официальным источникам: Росатом, Минтранс, Минвостокразвития, Правительство, плюс международные для сверки. Где источники расходятся — скажу прямо.");
 
 // =====================================================================
 // 2. Интерактив
@@ -329,8 +330,9 @@ take.forEach(([h, t], i) => {
   s.addText(t, { x: x + 0.15, y: 1.9, w: 2.6, h: 1.4, fontSize: 14, color: C.background1, margin: 0, valign: "top", isTextBox: true });
 });
 if (HAS_QR) {
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.0, y: 3.55, w: 1.5, h: 1.5, rectRadius: 0.08, fill: { color: "FFFFFF" }, line: { type: "none" }, objectName: "QR фон" });
-  s.addImage({ path: QRPATH, x: 8.1, y: 3.65, w: 1.3, h: 1.3, altText: "QR-код с контактами докладчика" });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.0, y: 3.55, w: 1.5, h: 1.65, rectRadius: 0.08, fill: { color: "FFFFFF" }, line: { type: "none" }, objectName: "QR фон" });
+  s.addImage({ path: QRPATH, x: 8.1, y: 3.62, w: 1.3, h: 1.3, altText: "QR-код с контактами докладчика" });
+  s.addText("Контакты", { x: 8.0, y: 4.94, w: 1.5, h: 0.22, fontSize: 11, bold: true, color: C.text1, align: "center", valign: "middle", margin: 0, isTextBox: true });
 }
 s.addText("Вопросы для обсуждения", { x: 0.5, y: 3.6, w: 9, h: 0.4, fontSize: 18, bold: true, fontFace: "Cambria", color: C.background1, margin: 0, isTextBox: true });
 s.addText([
